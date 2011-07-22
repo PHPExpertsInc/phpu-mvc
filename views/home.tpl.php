@@ -18,7 +18,7 @@ function resize_iframe()
 		</div>
 		<div class="bodyContent">
 			<p class="abstract" id="phpu_abstract">
-				<a href="http://www.phpu.cc/">PHPUniversity's</a> mission is to enhance the engineering aptitude of PHP developers through
+				<strong><a href="http://www.phpu.cc/">PHPUniversity's</a></strong> mission is to enhance the engineering aptitude of PHP developers through
 				group training, one-on-one mentoring and the exposition of high-quality open sourced
 				PHP projects utilizing a range of Web 2.0 technologies.
 			</p>
@@ -35,13 +35,16 @@ function resize_iframe()
 				</form>
 			</div>
 			<hr/>
+			<div class="license">
+				<div>Source code: <a href="phpu_mvc.zip">(build 8)</a></div>
+				<div>LaunchPad project: <a href="https://launchpad.net/phpu-mvc">(link)</a></div>
+				<div style="margin: 0 auto; width: 10em; padding: 0; margin-bottom: -10px"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a></div><div><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">PHP University's MVC</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.phpu.cc/mvc/" property="cc:attributionName" rel="cc:attributionURL">Theodore R. Smith</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+			</div>
+			<hr/>
 			<h2>Technical Docs</h2>
 			<iframe width="100%" id="techdocs" src="reports/docs.html"></iframe>
 			<h2>Unit Tests</h2>
 			<iframe width="100%" id="coverage" src="reports/coverage/" onload="resize_iframe();"></iframe> 
-		</div>
-		<div class="license">
-			<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">PHP University's MVC</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.phpu.cc/mvc/" property="cc:attributionName" rel="cc:attributionURL">Theodore R. Smith</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
 		</div>
 	</body>
 </html>
