@@ -4,6 +4,14 @@
 	<head>
 		<title>PHPUniversity MVC</title>
 		<link rel="stylesheet" href="css/main.css"/>
+    <script type="text/javascript"> 
+function resize_iframe()
+{
+	var hmc = document.getElementById("coverage");
+	hmc.style.height = (window.innerHeight - hmc.offsetTop - 10) + 'px';
+	hmc.style.width = (window.innerWidth - hmc.offsetLeft - 120) + 'px';
+}
+        </script>
 	</head>
 	<body>
 		<div class="marketbanner">
@@ -26,6 +34,11 @@
 					<div class="submit"><input type="submit" value="Go"/></div>
 				</form>
 			</div>
+			<hr/>
+			<h2>Technical Docs</h2>
+			<iframe width="100%" id="techdocs" src="reports/docs.html"></iframe>
+			<h2>Unit Tests</h2>
+			<iframe width="100%" id="coverage" src="reports/coverage/" onload="resize_iframe();"></iframe> 
 		</div>
 	</body>
 </html>
