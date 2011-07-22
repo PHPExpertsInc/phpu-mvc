@@ -14,6 +14,7 @@ class GenericControllerTest extends PHPUnit_Extensions_OutputTestCase
 {
 	/** @var GenericController **/
 	private $controller;
+
 	/**
 	 * Prepares the environment before running a test.
 	 */
@@ -54,9 +55,6 @@ class GenericControllerTest extends PHPUnit_Extensions_OutputTestCase
 		return $html;
 	}
 
-	/**
-	 * @covers GenericController::execute
-	 **/
 	public function testWillShowHomePage()
 	{
 		$homePageHTML = $this->grabPageHTML('home');
@@ -65,9 +63,6 @@ class GenericControllerTest extends PHPUnit_Extensions_OutputTestCase
 		$this->controller->execute(ActionsList::SHOW_HOME);
 	}
 
-	/**
-	 * @covers GenericController::execute
-	 **/
 	public function testWillShow404PageOnDemand()
 	{
 		$errorPageHTML = $this->grabPageHTML('404');

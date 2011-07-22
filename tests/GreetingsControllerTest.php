@@ -55,9 +55,6 @@ class GreetingsControllerTest extends PHPUnit_Extensions_OutputTestCase
 		return $html;
 	}
 
-	/**
-	 * @covers GreetingsController::execute
-	 **/
 	public function testWillShowGreetingPage()
 	{
 		$greetingPageHTML = $this->grabPageHTML('greeting', array('greeting' => 'Hi, Sam!'));
