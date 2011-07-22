@@ -15,7 +15,13 @@ session_start();
 require_once realpath(dirname(__FILE__) . '/../MVC.php');
 PHPU_MVC::init();
 
-$output = ControllerCommander::dispatch();
-
-echo $output;
+try
+{
+	$output = ControllerCommander::dispatch();
+	echo $output;
+}
+catch (Exception $e)
+{
+	ControllerCommander::dispatch(ActionsList::SHOW_404);
+}
 
