@@ -16,7 +16,7 @@
          strict="true"
          verbose="false">
 	<testsuites>
-		<testsuite name="Collabra Market Test Suite">
+		<testsuite name="PHP University's MVC Test Suite">
 			<directory>.</directory>
 		</testsuite>
 	</testsuites>
