@@ -16,9 +16,9 @@
 		<phpunitreport
 			infile="tests/reports/testsuites.xml"
 			format="noframes"
-			todir="tests/reports/html"
+			todir="tests/reports"
 			/>
-		<exec dir="tests" command="phpunit --coverage-html reports/html/coverage --testdox-html reports/html/docs.html" />
+		<exec dir="tests" command="phpunit --coverage-html reports/coverage --testdox-html reports/docs.html" />
 	</target>
 	<target name="phpcs">
 		<!-- standards: PHPCS, Zend, PEAR, Squiz and MySource
@@ -30,9 +30,9 @@
 			showWarnings="true"
 			file="."
 			docGenerator="HTML"
-			docFile="./tests/reports/html/phpcs/codingStandard.html">
-			<formatter type="summary" outfile="./tests/reports/html/phpcs/summary.txt"/>
-			<formatter type="full" outfile="./tests/reports/html/phpcs/full.txt"/>
+			docFile="./tests/reports/phpcs/codingStandard.html">
+			<formatter type="summary" outfile="./tests/reports/phpcs/summary.txt"/>
+			<formatter type="full" outfile="./tests/reports/phpcs/full.txt"/>
 		</phpcodesniffer>
 	</target>
 	<target name="run_ci_tasks">

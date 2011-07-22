@@ -393,3 +393,5 @@ form div.notes p, form div small {
 form div.wide small {
   margin: 0 0 5px 0;
 }
+
+p.abstract { margin-bottom: 10px; margin-top: 5px; text-indent: 2em;  }

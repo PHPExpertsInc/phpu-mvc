@@ -21,9 +21,9 @@
 			</p>
 			<div>
 				There is only one action defined: The Greeter. Please enter your name to be greated.
-				<form type="post">
+				<form method="post" action="?action=greet">
 					<div><label>Your name: </label><input type="text" name="name"/></div>
-					<div><input type="submit" value="Go"/></div>
+					<div class="submit"><input type="submit" value="Go"/></div>
 				</form>
 			</div>
 		</div>

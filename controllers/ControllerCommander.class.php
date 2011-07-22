@@ -21,7 +21,7 @@ class ControllerCommander
 
 	protected static function fetchAction()
 	{
-		$action = fRequest::get('action', 'string');
+		$action = filter_var($_GET['action'], FILTER_SANITIZE_STRING);
 
 		// I want to make the default action to show the home page...
 		if (empty($action))
@@ -46,7 +46,7 @@ class ControllerCommander
 	{
 		$action = ($action !== null) ? $action : self::fetchAction();
 		
-		$controllers = array('GreetingController', 'PaymentController', 'GenericController');
+		$controllers = array('GreetingsController', 'GenericController');
 		$output = '';
 		foreach ($controllers as $c)
 		{

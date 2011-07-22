@@ -34,6 +34,8 @@ class GreetingsController implements CommandI
 
 	protected function greet()
 	{
+		if (!isset($_POST['name'])) { throw InvalidArgumentException('Name is required'); }
+
 		$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 		$person = new Person;
 		$person->name = $name;
