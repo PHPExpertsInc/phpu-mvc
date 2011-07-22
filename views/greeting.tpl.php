@@ -24,6 +24,9 @@
 				<p>Well, that was your greeting. Hope you liked it!</p>
 			</div>
 		</div>
+		<div class="license">
+			<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">PHP University's MVC</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.phpu.cc/mvc/" property="cc:attributionName" rel="cc:attributionURL">Theodore R. Smith</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+		</div>
 	</body>
 </html>
 
