@@ -1,0 +1,2 @@
+* Fix controllers so they no longer return spurious "1"s.
+
