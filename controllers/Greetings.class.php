@@ -28,10 +28,9 @@ class GreetingsController implements CommandI
 	{
 		if ($action == ActionsList::GREET)
 		{
+			ControllerCommander::$handledAction = true;
 			$this->greet();
 		}
-
-		return true;
 	}
 
 	protected function greet()

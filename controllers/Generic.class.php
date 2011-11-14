@@ -15,10 +15,12 @@ class GenericController implements CommandI
 	{
 		if ($action == '' || $action == ActionsList::SHOW_HOME)
 		{
+			ControllerCommander::$handledAction = true;
 			require PHPUMVC_PATH . '/views/home.tpl.php';
 		}
 		else if ($action == ActionsList::SHOW_404)
 		{
+			ControllerCommander::$handledAction = true;
 			header('HTTP/1.0 404 FILE NOT FOUND');
 			require PHPUMVC_PATH . '/views/404.tpl.php';
 		}

@@ -19,6 +19,7 @@ class ControllerCommander
 {
 	// @codeCoverageIgnoreStart
 	private function __construct() { }
+	public static $actionExecuted = false;
 	// @codeCoverageIgnoreStop
 
 	protected static function fetchAction()
@@ -50,21 +51,17 @@ class ControllerCommander
 		
 		$controllers = array('GreetingsController', 'GenericController');
 		$output = '';
+		self::$actionExecuted = false;
 		foreach ($controllers as $c)
 		{
 			$controller = new $c;
-			if (($result = $controller->execute($action)) != null)
-			{
-				$output .= $result;
-			}
+			$controller->execute($action);
 		}
 
-		if (empty($output))
+		if (self::$actionExecuted === false)
 		{
 			throw new ControllerException('No implementation found for ' . $action, ControllerException::INVALID_ACTION);
 		}
-
-		return $output;
 	}
 }
 
