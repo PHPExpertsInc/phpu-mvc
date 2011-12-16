@@ -35,6 +35,12 @@
 			<formatter type="full" outfile="./tests/reports/phpcs/full.txt"/>
 		</phpcodesniffer>
 	</target>
+	<target name="package">
+		<exec dir="." command="bzr export phpu-mvc" passthru="true"/>
+		<exec dir="." command="zip -r phpu-mvc phpu-mvc" passthru="true"/>
+		<move file="phpu-mvc.zip" todir="web" overwrite="true"/>
+		<delete dir="phpu-mvc" includeemptydirs="true"/>
+	</target>
 	<target name="build">
 		<exec
 		    dir="."
