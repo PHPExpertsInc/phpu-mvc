@@ -20,6 +20,7 @@
 			/>
 		<fail if="build.failed" message="Bailing out due to unit test failure."/>
 		<exec dir="tests" command="phpunit --coverage-html reports/coverage --testdox-html reports/docs.html" />
+		<phingcall target="package"/>
 	</target>
 	<target name="phpcs">
 		<!-- standards: PHPCS, Zend, PEAR, Squiz and MySource
