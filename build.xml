@@ -35,7 +35,7 @@
 			<formatter type="full" outfile="./tests/reports/phpcs/full.txt"/>
 		</phpcodesniffer>
 	</target>
-	<target name="run_ci_tasks">
+	<target name="build">
 		<exec
 		    dir="."
 		    command="bzr log --line --limit 20 | md5sum | awk '{print $1}' | diff -u build.md5 -"
