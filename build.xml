@@ -5,7 +5,7 @@
 	</target>
 	<target name="unit_tests">
 		<exec dir="." command="bzr up"/>
-		<phpunit>
+		<phpunit failureproperty="build.failed" errorproperty="build.failed">
 			<formatter type="xml" todir="tests/reports"/>
 			<batchtest>
 				<fileset id="unittests" dir="./tests">
@@ -18,6 +18,7 @@
 			format="noframes"
 			todir="tests/reports"
 			/>
+		<fail if="build.failed" message="Bailing out due to unit test failure."/>
 		<exec dir="tests" command="phpunit --coverage-html reports/coverage --testdox-html reports/docs.html" />
 	</target>
 	<target name="phpcs">
