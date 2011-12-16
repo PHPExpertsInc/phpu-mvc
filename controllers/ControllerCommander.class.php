@@ -19,12 +19,12 @@ class ControllerCommander
 {
 	// @codeCoverageIgnoreStart
 	private function __construct() { }
-	public static $actionExecuted = false;
+	public static $handledAction = false;
 	// @codeCoverageIgnoreStop
 
 	protected static function fetchAction()
 	{
-		$action = filter_var($_GET['action'], FILTER_SANITIZE_STRING);
+		$action = filter_var(@$_GET['action'], FILTER_SANITIZE_STRING);
 
 		// I want to make the default action to show the home page...
 		if (empty($action))
@@ -51,14 +51,14 @@ class ControllerCommander
 		
 		$controllers = array('GreetingsController', 'GenericController');
 		$output = '';
-		self::$actionExecuted = false;
+		self::$handledAction = false;
 		foreach ($controllers as $c)
 		{
 			$controller = new $c;
 			$controller->execute($action);
 		}
 
-		if (self::$actionExecuted === false)
+		if (self::$handledAction === false)
 		{
 			throw new ControllerException('No implementation found for ' . $action, ControllerException::INVALID_ACTION);
 		}
