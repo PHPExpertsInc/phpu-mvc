@@ -10,9 +10,9 @@
  **/
 
 require_once 'bootstrap.inc.php';
-require_once 'PHPUnit/Extensions/OutputTestCase.php';
+require_once 'PHPUnit/Framework/TestCase.php';
 
-class GreetingsControllerTest extends PHPUnit_Extensions_OutputTestCase
+class GreetingsControllerTest extends PHPUnit_Framework_TestCase
 {
 	/** @var GreetingsController **/
 	private $controller;
